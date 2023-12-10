@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Nr-PT-647">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Name and Phone 2-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AddNamePhoneNumber2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tdw-yx-OqB">
+                                <rect key="frame" x="5" y="108" width="383" height="705"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="rTm-ZR-BTH">
+                                        <rect key="frame" x="0.0" y="50" width="383" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rTm-ZR-BTH" id="ahO-Ze-G9F">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="CLI-md-HTf"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="GDp-lI-pM5"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tdw-yx-OqB" secondAttribute="bottom" constant="5" id="4j2-95-Xae"/>
+                            <constraint firstItem="tdw-yx-OqB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="KZh-2K-Qtp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tdw-yx-OqB" secondAttribute="trailing" constant="5" id="Sdv-BR-3uQ"/>
+                            <constraint firstItem="tdw-yx-OqB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="cjO-Dg-WsQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Name and Phone 2" id="EWj-r5-eED">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="d7P-u7-2Ft">
+                            <connections>
+                                <action selector="addNamePhoneNumber:" destination="BYZ-38-t0r" id="Tu4-cI-d81"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tblView" destination="tdw-yx-OqB" id="yKx-mr-s5d"/>
+                        <segue destination="8PK-QO-43g" kind="show" identifier="segueNamePhoneNumber" id="zkv-85-cFL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1063.3587786259541" y="4.9295774647887329"/>
+        </scene>
+        <!--Name Phone Number View Controller-->
+        <scene sceneID="gwC-dP-fcB">
+            <objects>
+                <viewController id="8PK-QO-43g" customClass="NamePhoneNumberViewController" customModule="AddNamePhoneNumber2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c0e-2d-mM7">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Add Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eHH-lt-r5j">
+                                <rect key="frame" x="15" y="414" width="363" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Add Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="py1-BA-fj3">
+                                <rect key="frame" x="15" y="345" width="363" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="HOh-1u-1Id"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyo-gZ-Csp">
+                                <rect key="frame" x="15" y="483" width="363" height="40"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="UNB-5A-nNs"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="OK">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveNamePhone:" destination="8PK-QO-43g" eventType="touchUpInside" id="pn7-P3-Sjd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="M2z-9F-7CD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hyo-gZ-Csp" firstAttribute="top" secondItem="eHH-lt-r5j" secondAttribute="bottom" constant="35" id="2OS-ah-Mi2"/>
+                            <constraint firstItem="M2z-9F-7CD" firstAttribute="trailing" secondItem="hyo-gZ-Csp" secondAttribute="trailing" constant="15" id="5uv-et-TxV"/>
+                            <constraint firstItem="eHH-lt-r5j" firstAttribute="centerX" secondItem="c0e-2d-mM7" secondAttribute="centerX" constant="5" id="7we-70-VvE"/>
+                            <constraint firstItem="py1-BA-fj3" firstAttribute="leading" secondItem="M2z-9F-7CD" secondAttribute="leading" constant="15" id="AQE-oX-7NG"/>
+                            <constraint firstItem="eHH-lt-r5j" firstAttribute="top" secondItem="py1-BA-fj3" secondAttribute="bottom" constant="35" id="AmZ-fR-bUM"/>
+                            <constraint firstItem="eHH-lt-r5j" firstAttribute="leading" secondItem="M2z-9F-7CD" secondAttribute="leading" constant="15" id="DeZ-qA-pqH"/>
+                            <constraint firstItem="M2z-9F-7CD" firstAttribute="trailing" secondItem="py1-BA-fj3" secondAttribute="trailing" constant="15" id="EZF-G3-mCV"/>
+                            <constraint firstItem="eHH-lt-r5j" firstAttribute="centerY" secondItem="c0e-2d-mM7" secondAttribute="centerY" constant="5" id="N9j-Dt-peA"/>
+                            <constraint firstItem="hyo-gZ-Csp" firstAttribute="leading" secondItem="M2z-9F-7CD" secondAttribute="leading" constant="15" id="c7x-Sb-VOy"/>
+                            <constraint firstItem="M2z-9F-7CD" firstAttribute="trailing" secondItem="eHH-lt-r5j" secondAttribute="trailing" constant="15" id="wzm-jv-2WS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qgp-zl-MPO"/>
+                    <connections>
+                        <outlet property="name" destination="py1-BA-fj3" id="8Ej-Pd-8ne"/>
+                        <outlet property="phoneNumber" destination="eHH-lt-r5j" id="THt-A0-HLQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PYa-t7-5Cb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2023" y="0.0"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4bm-5d-3Iq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Nr-PT-647" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wrP-Nt-dlv">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="PBY-fh-V3f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5V3-D5-afF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.64122137404578" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
